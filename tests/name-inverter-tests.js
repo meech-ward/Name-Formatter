@@ -8,8 +8,11 @@ describe('#invertName()', function() {
   it('should throw an error when name is undefined', function() {
     assert.throws(invertName);
   });
-  
-  it('should return an empty string when passed an empty string');
+
+  it('should return an empty string when passed an empty string', function() {
+    assert.equal(invertName(""), "");
+  });
+
   it('should return a single name when passed a single name');
   it('should return a single name when passed a single name with extra spaces');
   it('should return a last-name, first-name when passed a first and last-name');
