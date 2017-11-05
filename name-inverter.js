@@ -3,7 +3,7 @@ function invertName(name) {
     throw 'No Name Passed In';
   }
 
-  return "";
+  return name;
 }
 
 module.exports = invertName;

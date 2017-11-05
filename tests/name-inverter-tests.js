@@ -13,7 +13,10 @@ describe('#invertName()', function() {
     assert.equal(invertName(""), "");
   });
 
-  it('should return a single name when passed a single name');
+  it('should return a single name when passed a single name', function() {
+    assert.equal(invertName("name"), "name");
+  });
+  
   it('should return a single name when passed a single name with extra spaces');
   it('should return a last-name, first-name when passed a first and last-name');
   it('should return a last-name, first-name when passed a first and last-name with extra spaces around the names');
