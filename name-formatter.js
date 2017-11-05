@@ -33,7 +33,7 @@ class NameFormatter {
   }
 
   isHonorific(text) {
-    if (text.toLowerCase() === "mr.") {
+    if (text.toLowerCase() === "dr.") {
       return text;
     }
     return null;
