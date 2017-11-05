@@ -13,6 +13,10 @@ function invertName(name) {
     return name;
   }
 
+  if (names[0].toLowerCase() === "mr.") {
+    return `${names[0]} ${names[1]}`
+  }
+
   return `${names[1]}, ${names[0]}`;
 
 }

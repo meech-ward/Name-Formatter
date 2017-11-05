@@ -30,9 +30,13 @@ describe('#invertName()', function() {
   });
 
   it('should return an empty string when passed mr.', function() {
-    assert.equal(invertName("mr."), "");
+    assert.equal(invertName("Mr."), "");
   });
-  it('should return mr. first-name when passed mr. first-name');
+
+  it('should return mr. first-name when passed mr. first-name', function() {
+    assert.equal(invertName("Mr. first"), "Mr. first");
+  });
+
   it('should return a mr. last-name, first-name when passed mr. first-name last-name');
  
 });
