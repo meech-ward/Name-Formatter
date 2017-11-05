@@ -5,7 +5,10 @@ const invertName = require('../name-inverter');
 
 describe('#invertName()', function() {
 
-  it('should throw an error when name is undefined');
+  it('should throw an error when name is undefined', function() {
+    assert.throws(invertName);
+  });
+  
   it('should return an empty string when passed an empty string');
   it('should return a single name when passed a single name');
   it('should return a single name when passed a single name with extra spaces');
