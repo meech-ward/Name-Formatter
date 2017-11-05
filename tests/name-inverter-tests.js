@@ -37,6 +37,8 @@ describe('#invertName()', function() {
     assert.equal(invertName("Mr. first"), "Mr. first");
   });
 
-  it('should return a mr. last-name, first-name when passed mr. first-name last-name');
+  it('should return a mr. last-name, first-name when passed mr. first-name last-name', function() {
+    assert.equal(invertName("Mr. first Last"), "Mr. Last, first");
+  });
  
 });

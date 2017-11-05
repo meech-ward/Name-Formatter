@@ -13,11 +13,19 @@ function invertName(name) {
     return name;
   }
 
-  if (names[0].toLowerCase() === "mr.") {
-    return `${names[0]} ${names[1]}`
+  if (names.length == 2) {
+    if (names[0].toLowerCase() === "mr.") {
+      return `${names[0]} ${names[1]}`
+    }
+
+    return `${names[1]}, ${names[0]}`;
   }
 
-  return `${names[1]}, ${names[0]}`;
+  if (names.length == 3) {
+    if (names[0].toLowerCase() === "mr.") {
+      return `${names[0]} ${names[2]}, ${names[1]}`
+    }
+  }
 
 }
 
