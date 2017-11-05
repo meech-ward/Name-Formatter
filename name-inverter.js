@@ -5,8 +5,11 @@ function invertName(name) {
 
   name = name.trim();
 
-  let names = name.split(' ');
+  let names = name.split(/\s+/);
   if (names.length == 1) {
+    if (name.toLowerCase() === "mr.") {
+      return "";
+    }
     return name;
   }
 

@@ -25,8 +25,13 @@ describe('#invertName()', function() {
     assert.equal(invertName("first last"), "last, first");
   });
 
-  it('should return a last-name, first-name when passed a first and last-name with extra spaces around the names');
-  it('should return an empty string when passed mr.');
+  it('should return a last-name, first-name when passed a first and last-name with extra spaces around the names', function() {
+    assert.equal(invertName("  first   last  "), "last, first");
+  });
+
+  it('should return an empty string when passed mr.', function() {
+    assert.equal(invertName("mr."), "");
+  });
   it('should return mr. first-name when passed mr. first-name');
   it('should return a mr. last-name, first-name when passed mr. first-name last-name');
  
