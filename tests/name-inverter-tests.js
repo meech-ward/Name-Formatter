@@ -1,7 +1,7 @@
 const chai = require('chai');
 const assert = chai.assert;
 
-const NameFormatter = require('../name-inverter');
+const NameFormatter = require('../name-formatter');
 
 describe('#nameFormatter.invertName()', function() {
 
