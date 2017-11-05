@@ -51,5 +51,10 @@ describe('#nameFormatter.invertName()', function() {
     const nameFormatter = new NameFormatter();
     assert.equal(nameFormatter.invertName("Mr. first Last"), "Mr. Last, first");
   });
+
+  it('should return a mr. last-name, first-name when passed mr. first-name last-name with extra spaces', function() {
+    const nameFormatter = new NameFormatter();
+    assert.equal(nameFormatter.invertName("  Mr.   first   Last  "), "Mr. Last, first");
+  });
  
 });
