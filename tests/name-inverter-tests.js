@@ -5,44 +5,14 @@ const invertName = require('../name-inverter');
 
 describe('#invertName()', function() {
 
-  context('with undefined name', function() {
-    it('should throw an error');
-  });
-
-  context('with empty name', function() {
-    it('should be empty string');
-  });
-
-  context('with single name', function() {
-    it('should be single name');
-
-    context('and extra spaces around the name', function() {
-      it('should be single name with no spaces');
-    });
-
-  });
-
-  context('with first and last name', function() {
-    it('should be last name, first name');
-
-    context('and extra spaces around the names', function() {
-      it('should be last name, first name with no extra spaces');
-    });
-    
-  });
-
-  context('with honorific', function() {
-    it('should be empty string');
-
-    context('and first name', function() {
-      it('should be <honorific first name>');
-
-      context('and last name', function() {
-        it('should be <honorific last name, first name>');
-      });
-
-    });
-
-  });
+  it('should throw an error when name is undefined');
+  it('should return an empty string when passed an empty string');
+  it('should return a single name when passed a single name');
+  it('should return a single name when passed a single name with extra spaces');
+  it('should return a last-name, first-name when passed a first and last-name');
+  it('should return a last-name, first-name when passed a first and last-name with extra spaces around the names');
+  it('should return an empty string when passed mr.');
+  it('should return mr. first-name when passed mr. first-name');
+  it('should return a mr. last-name, first-name when passed mr. first-name last-name');
  
 });
