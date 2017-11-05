@@ -3,30 +3,32 @@ function invertName(name) {
     throw 'No Name Passed In';
   }
 
-  name = name.trim();
+  let names = name.trim().split(/\s+/);
 
-  let names = name.split(/\s+/);
+  let honorific = null; 
+  if (names[0].toLowerCase() === "mr.") {
+    honorific = names.shift();
+  }
+  
+  
+  if (names.length == 0) {
+    return "";
+  }
+
+  let invertedName = "";
   if (names.length == 1) {
-    if (name.toLowerCase() === "mr.") {
-      return "";
-    }
-    return name;
+    invertedName = names[0];
   }
 
   if (names.length == 2) {
-    if (names[0].toLowerCase() === "mr.") {
-      return `${names[0]} ${names[1]}`
-    }
-
-    return `${names[1]}, ${names[0]}`;
+    invertedName = `${names[1]}, ${names[0]}`;
   }
 
-  if (names.length == 3) {
-    if (names[0].toLowerCase() === "mr.") {
-      return `${names[0]} ${names[2]}, ${names[1]}`
-    }
+  if (honorific) {
+    invertedName = `${honorific} ${invertedName}`;
   }
 
+  return invertedName;
 }
 
 module.exports = invertName;
