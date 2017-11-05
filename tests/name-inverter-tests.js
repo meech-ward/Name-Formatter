@@ -3,7 +3,7 @@ const assert = chai.assert;
 
 const NameFormatter = require('../name-formatter');
 
-describe('#nameFormatter.invertName()', function() {
+describe('invert name', function() {
 
   it('should throw an error when name is undefined', function() {
     const nameFormatter = new NameFormatter();
@@ -37,24 +37,24 @@ describe('#nameFormatter.invertName()', function() {
     assert.equal(nameFormatter.invertName("  first   last  "), "last, first");
   });
 
-  it('should return an empty string when passed mr.', function() {
+  it('should return an empty string when passed Dr.', function() {
     const nameFormatter = new NameFormatter();
-    assert.equal(nameFormatter.invertName("Mr."), "");
+    assert.equal(nameFormatter.invertName("Dr."), "");
   });
 
-  it('should return mr. first-name when passed mr. first-name', function() {
+  it('should return Dr. first-name when passed Dr. first-name', function() {
     const nameFormatter = new NameFormatter();
-    assert.equal(nameFormatter.invertName("Mr. first"), "Mr. first");
+    assert.equal(nameFormatter.invertName("Dr. first"), "Dr. first");
   });
 
-  it('should return a mr. last-name, first-name when passed mr. first-name last-name', function() {
+  it('should return a Dr. last-name, first-name when passed Dr. first-name last-name', function() {
     const nameFormatter = new NameFormatter();
-    assert.equal(nameFormatter.invertName("Mr. first Last"), "Mr. Last, first");
+    assert.equal(nameFormatter.invertName("Dr. first Last"), "Dr. Last, first");
   });
 
-  it('should return a mr. last-name, first-name when passed mr. first-name last-name with extra spaces', function() {
+  it('should return a Dr. last-name, first-name when passed Dr. first-name last-name with extra spaces', function() {
     const nameFormatter = new NameFormatter();
-    assert.equal(nameFormatter.invertName("  Mr.   first   Last  "), "Mr. Last, first");
+    assert.equal(nameFormatter.invertName("  Dr.   first   Last  "), "Dr. Last, first");
   });
  
 });
