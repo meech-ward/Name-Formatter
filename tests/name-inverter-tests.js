@@ -12,7 +12,9 @@ describe('#nameFormatter.invertName()', function() {
 
   it('should return an empty string when passed an empty string', function() {
     const nameFormatter = new NameFormatter();
-    assert.equal(nameFormatter.invertName(""), "");
+    const inputName = "";
+    const expectedOutput = "";
+    assert.equal(nameFormatter.invertName(inputName), expectedOutput);
   });
 
   it('should return a single name when passed a single name', function() {
