@@ -16,10 +16,8 @@ describe('invert name', function() {
     nameFormatter = new NameFormatter();
   });
   
-  context('when name is undefined', function() {
-    it('should throw an error', function() {
-      assert.throws(nameFormatter.invertName);
-    });
+  it('should throw an error when name is undefined', function() {
+    assert.throws(nameFormatter.invertName);
   });
 
   it('should return an empty string when passed an empty string', function() {
