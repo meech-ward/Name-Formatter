@@ -2,7 +2,7 @@ class NameFormatter {
   
   invertName(name) {
     if (name === undefined) {
-      throw 'No Name Passed In';
+      throw 'Invalid name passed to function'
     }
 
     let names = name.trim().split(/\s+/);
@@ -38,6 +38,7 @@ class NameFormatter {
     }
     return null;
   }
+  
 }
 
 module.exports = NameFormatter;

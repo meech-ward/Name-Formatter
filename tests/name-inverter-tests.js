@@ -7,6 +7,11 @@ describe('invert name', function() {
 
   it('should throw an error when name is undefined', function() {
     const nameFormatter = new NameFormatter();
+    assert.throws(nameFormatter.invertName, "Invalid name passed to function");
+  });
+
+  it('should throw an error with type "" when name is undefined', function() {
+    const nameFormatter = new NameFormatter();
     assert.throws(nameFormatter.invertName);
   });
 
